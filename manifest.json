@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Slides Translator",
+  "version": "1.0",
+  "description": "Translate Google Slides content using ChatGPT",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.google.com/*",
+    "https://script.google.com/*",
+    "https://docs.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/presentation/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["popup.html"],
+    "matches": ["https://docs.google.com/*", "https://script.google.com/*"]
+  }]
+} 
