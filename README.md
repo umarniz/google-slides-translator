@@ -24,8 +24,8 @@ An automated solution for translating Google Slides presentations while preservi
 1. Create a new Google Apps Script project:
    - Go to [Google Apps Script](https://script.google.com/)
    - Create a new project
-   - Copy the contents of `Code.gs` into the script editor
-   - Create a new file called `chatgpt.gs` and copy its contents
+   - Copy the contents of `google-apps-script/Code.gs` into the script editor
+   - Create a new file called `google-apps-script/chatgpt.gs` and copy its contents
 
 2. Configure the ChatGPT API:
    - Replace `YOUR_API_KEY` in `chatgpt.gs` with your actual OpenAI API key
